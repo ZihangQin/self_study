@@ -16,7 +16,7 @@ type Node struct {
 
 //创建头结点，用于保存创世区块
 func CreatHeaderNode(data *Block.Block) *Node {
-		//创建头结点
+	//创建头结点
 	headNode := new(Node)
 	//将头结点的指针域指向nil
 	headNode.NextNode = nil
@@ -40,19 +40,17 @@ func AddNode(data *Block.Block, node *Node) *Node {
 
 }
 
-
 //查看链表中的数据
-func ShowNodes(node *Node)  {
+func ShowNodes(node *Node) {
 	n := node
-	for{
+	for {
 		//如果有数据就打印,没有下个结点就结束循环
 		if n.NextNode == nil {
 			fmt.Println(n.Data)
 			break
-		}else {
+		} else {
 			fmt.Println(n.Data)
 			n = n.NextNode
 		}
 	}
 }
-

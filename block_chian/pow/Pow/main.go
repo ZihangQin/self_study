@@ -7,7 +7,7 @@ import (
 
 func main() {
 	firest := Block.GenerateFirstBlock("创世区块")
-	second := Block.GenerateNextBlock("新区块",firest)
+	second := Block.GenerateNextBlock("新区块", firest)
 
 	//创建链表
 	header := Blockchain.CreatHeaderNode(&firest)
